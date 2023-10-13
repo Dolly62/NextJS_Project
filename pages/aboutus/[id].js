@@ -11,9 +11,9 @@ const details = [
 function DeveloperDetail() {
   const router = useRouter();
 
-  const { aboutId } = router.query;
+  const { id } = router.query;
 
-  const developer = details.find((dev) => dev.id === parseInt(aboutId));
+  const developer = details.find((dev) => dev.id === parseInt(id));
 
   if (!developer) {
     return <h1>Developer doesn't exist</h1>;
